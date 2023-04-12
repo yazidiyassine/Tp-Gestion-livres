@@ -1,0 +1,30 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="GestionLivres"
+		transaction-type="RESOURCE_LOCAL">
+		<!-- Persistence provider -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!-- Entity classes -->
+		<properties>
+			<property name="jakarta.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<!-- The JDBC URL to the database instance -->
+			<property name="jakarta.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/gr1Tp1Db?createDatabaseIfNotExist=true&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+
+			<!-- The database username -->
+			<property name="jakarta.persistence.jdbc.user" value="root" />
+
+			<!-- The database password -->
+			<property name="jakarta.persistence.jdbc.password" value="" />
+
+			<!-- Schema generation -->
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>

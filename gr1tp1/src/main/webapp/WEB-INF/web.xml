@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <servlet>
+    <description></description>
+    <display-name>tst</display-name>
+    <servlet-name>tst</servlet-name>
+    <servlet-class>tst</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tst</servlet-name>
+    <url-pattern>/tst</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServ</display-name>
+    <servlet-name>LoginServ</servlet-name>
+    <servlet-class>controller_frontal.LoginServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServ</servlet-name>
+    <url-pattern>/LoginServ</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>LoginFilter</display-name>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>controller_frontal.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/vues/*</url-pattern>
+  </filter-mapping>
+  <display-name>gestion_livres</display-name>
+  <welcome-file-list>
+    <welcome-file>/login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServ</display-name>
+    <servlet-name>RegisterServ</servlet-name>
+    <servlet-class>controller_frontal.RegisterServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServ</servlet-name>
+    <url-pattern>/RegisterServ</url-pattern>
+  </servlet-mapping>
+</web-app>
